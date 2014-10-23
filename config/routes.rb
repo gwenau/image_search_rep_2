@@ -1,7 +1,7 @@
 ImageSearch2::Application.routes.draw do
   root :to => 'main#index'
 
-  get '/gossip' => "main#gossip"
+  get '/results' => "main#results"
 
 
   # The priority is based upon order of creation:
