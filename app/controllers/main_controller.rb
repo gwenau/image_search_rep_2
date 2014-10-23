@@ -10,14 +10,11 @@ class MainController < ApplicationController
 
   end
 
-  # def results(colour)
-  #   binding.pry
-  #   @colour = colour
-  # end
-
   def results
     # binding.pry
-    @colour = params["format"]
+    colour = params["format"]
+    rword = @rwords.sample
+    @lucky_draw = colour + " & " +rword
   end
 
 end
