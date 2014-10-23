@@ -1,7 +1,5 @@
 class MainController < ApplicationController
 
-
-
   def initialize
     @colours = ["red", "pink", "orange", "yellow", "green", "blue", "purple"]
 

@@ -1,5 +1,11 @@
-Hello World!
+<h1 style="text-align: center;">Select a colour and we'll show you it's beauty</h1>
 
-<% @colours.each do |c| %>
-  <%= c %><br>
-<% end %>
+<div style="margin-left: 90px">
+  <% @colours.each do |c| %>
+    <div class="colour" style="width: 200px;
+    height: 200px;
+    border: 1px black solid; background-color: <%= c %>; float: left; text-align: center;">
+      <%= c  %>
+    </div>
+  <% end %>
+</div>
