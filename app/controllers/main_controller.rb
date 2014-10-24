@@ -26,4 +26,8 @@ class MainController < ApplicationController
     binding.pry
   end
 
+  def past
+    @past_search_results
+  end
+
 end
