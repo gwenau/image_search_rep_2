@@ -22,7 +22,8 @@ class MainController < ApplicationController
     url = "https://www.googleapis.com/customsearch/v1?key="+api_key+"&cx="+id+"&q="+entry+"&alt=json"
     html = HTTParty.get(url)
     # @hash = JSON(html)
-    @hash = html["items"][0]["pagemap"]["cse_image"][0]["src"]
+    # @hash = html["items"][0]["pagemap"]["cse_image"][0]["src"]
+    @hash = html["items"]
     binding.pry
   end
 

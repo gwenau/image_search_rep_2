@@ -1,5 +1,12 @@
 <h1>Result of images goes here <%= @lucky_draw %></h1>
 
 <% if @hash %>
-  <img src="<%= @hash %>"></img>
+  <%= @hash.each do |a| %>
+    <%= a %> <br><br>
+    <%#= ak.each do |bk, bv| %>
+
+    <%# end %>
+  <% end %>
+
+<!--   <img src="<%#= @hash %>"></img> -->
 <% end %>
