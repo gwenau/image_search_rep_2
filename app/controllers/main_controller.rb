@@ -1,16 +1,8 @@
 class MainController < ApplicationController
 
-  @@past_search_results ||= []
-
   def initialize
     @colours = ["red", "pink", "orange", "yellow", "green", "blue", "purple"]
-
     @rwords = ["man", "mountain", "state", "ocean", "country", "building", "cat", "airline", "wealth", "happiness", "pride", "fear", "religion", "bird", "book", "phone", "rice", "snow", "water"]
-
-  end
-
-  def create
-
   end
 
   def results
@@ -32,21 +24,7 @@ class MainController < ApplicationController
 
     @past_search_results = []
     @past_search_results.unshift({time: time, colour: colour, noun: rword, input: @hash})
-    # @past_search_results.save
-    binding.pry
   end
-
-  @past_search_results
-  # def savesearch
-  #   @past = Main.
-
-  # end
-
-  # def attend
-  #   @event = Event.find(params[:id])
-  #   @event.users << current_user
-  #   @event.save
-  # end
 
   def past
     @past_search_results
