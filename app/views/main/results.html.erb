@@ -1,5 +1,5 @@
 <a href="/"><button>Back</button></a>
-<h1 style="text-align: center">Result of images goes here <%= @lucky_draw %></h1>
+<h1 style="text-align: center">Result for <%= @lucky_draw %></h1>
 <% if @hash %>
   <div style="text-align: center">
     <a href="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>"><img src="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>" width="400px" style="border: 6px blue solid"/></a>
