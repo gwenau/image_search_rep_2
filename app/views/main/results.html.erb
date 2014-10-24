@@ -1,7 +1,8 @@
 <h1>Result of images goes here <%= @lucky_draw %></h1>
 
 <% if @hash %>
-  <% @hash.each do |a| %>
+  <%= @hash.first %>
+  <% @hash[2..5].each do |a| %>
       <a href="<%= a["pagemap"]["cse_image"][0]["src"] %>"><img src="<%= a["pagemap"]["cse_image"][0]["src"] %>" width="200px"/></a><br><br>
   <% end %>
 <% end %>
