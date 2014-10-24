@@ -1,18 +1,13 @@
-<h1>Result of images goes here <%= @lucky_draw %></h1>
-
-<% @hash[0..4].each do |test|%>
-  <%= test["pagemap"]["cse_image"][0]["src"] %><br><br>
-<% end %>
-
+<h1 style="text-align: center">Result of images goes here <%= @lucky_draw %></h1>
 <% if @hash %>
-  <div style="border: 3px red solid">
-    <a href="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>"><img src="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>" width="400px"/></a>
+  <div style="text-align: center">
+    <a href="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>"><img src="<%= @hash.first["pagemap"]["cse_image"][0]["src"] %>" width="400px" style="border: 6px blue solid"/></a>
   </div>
-  <br>
-  <br>
-  <% @hash[1..4].each do |a| %>
-    <div style="border: 2px blue solid; float: left"> 
-      <a href="<%= a["pagemap"]["cse_image"][0]["src"] %>"><img src="<%= a["pagemap"]["cse_image"][0]["src"] %>" width="200px"/></a><br><br>
-    </div>
-  <% end %>
+  <div style="margin-left: 300px">
+    <% @hash[1..4].each do |a| %>
+      <div style="float: left; margin: 15px"> 
+        <img src="<%= a["pagemap"]["cse_image"][0]["src"] %>" width="200px"/>
+      </div>
+    <% end %>
+  </div>
 <% end %>
