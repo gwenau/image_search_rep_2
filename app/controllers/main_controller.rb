@@ -4,6 +4,8 @@ class MainController < ApplicationController
     @colours = ["red", "pink", "orange", "yellow", "green", "blue", "purple"]
 
     @rwords = ["man", "mountain", "state", "ocean", "country", "building", "cat", "airline", "wealth", "happiness", "pride", "fear", "religion", "bird", "book", "phone", "rice", "snow", "water"]
+
+    @past_search_results = []
   end
 
   def results
@@ -17,7 +19,10 @@ class MainController < ApplicationController
 
     url = "https://www.googleapis.com/customsearch/v1?key="+api_key+"&cx="+id+"&q="+entry+"&alt=json"
     html = HTTParty.get(url)
-    @hash = html["items"]
+    @hash = html["items"][0..4]
+    time = Time.now.getutc
+
+    @past_search_results << { time: time, input: @hash }
     binding.pry
   end
 
