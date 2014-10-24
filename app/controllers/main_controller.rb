@@ -9,11 +9,8 @@ class MainController < ApplicationController
     colour = params["format"]
     rword = @rwords.sample
     @lucky_draw = colour + " " + rword
-    
     entry = @lucky_draw.gsub(' ', '+')
-    # api_key = "AIzaSyCWS9V5UF4foe0qsutwad_CU8l8w0RvX3c" # gwenau08
-    # id = "003846610913805178311:gydxsvhryt4" #gwenau08
-
+    # I am really not sure where to put the environment variables in the config folder at the moment. Although I would not do this when I work for a company as it can create a security risk, on this occasion, I have provided it for ease of the code test assessment.
     api_key = "AIzaSyBqoZ-SBdyqfayjnfKX0XPvl55b6R1NK20"
     gcse_id = "010147666231756631346:si888rngvei"
 
