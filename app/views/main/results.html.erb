@@ -2,11 +2,6 @@
 
 <% if @hash %>
   <% @hash.each do |a| %>
-      <%= a["pagemap"]["cse_image"][0]["src"] %> <br><br>
-    <%#= ak.each do |bk, bv| %>
-
-    <%# end %>
+      <img src="<%= a["pagemap"]["cse_image"][0]["src"] %>" /><br>
   <% end %>
-
-<!--   <img src="<%#= @hash %>"></img> -->
 <% end %>
