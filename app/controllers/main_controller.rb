@@ -15,14 +15,16 @@ class MainController < ApplicationController
     # id = "003846610913805178311:gydxsvhryt4" #gwenau08
 
     api_key = "AIzaSyBqoZ-SBdyqfayjnfKX0XPvl55b6R1NK20"
-    id = "010147666231756631346:si888rngvei"
+    gcse_id = "010147666231756631346:si888rngvei"
 
-    url = "https://www.googleapis.com/customsearch/v1?key="+api_key+"&cx="+id+"&q="+entry+"&alt=json"
+    url = "https://www.googleapis.com/customsearch/v1?key="+api_key+"&cx="+gcse_id+"&q="+entry+"&alt=json"
     html = HTTParty.get(url)
     @hash = html["items"][0..4]
-    time = Time.now.getutc
+    time = Time.now.getutc.to_s
+    # Ruby has a method called benchmark to record response time but i can not work out how to use it properly by myself at this stage.
 
     @past_search_results = []
+    # The unshift method was used here as a possible alternative to the Ruby sort or sort_by method.
     @past_search_results.unshift({time: time, colour: colour, noun: rword, input: @hash})
   end
 
