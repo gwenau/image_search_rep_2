@@ -40,7 +40,6 @@ GEM
     coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.2.2)
-    gem (0.0.1.alpha)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -58,8 +57,9 @@ GEM
     mime-types (1.25.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    pg (0.17.1)
     polyglot (0.3.5)
-    pry (0.10.0)
+    pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -104,7 +104,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.41)
+    tzinfo (0.3.42)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -114,9 +114,9 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  gem
   httparty
   jquery-rails
+  pg
   pry
   rails (= 3.2.18)
   sass-rails (~> 3.2.3)

@@ -1,25 +1,4 @@
 <h1>Past Search Results</h1>
-  <% @past_search_results.each do |av| %>
-    <table>
-      <tr>
-         <th style="border: 1px black solid;">Date & Time</th>
-         <th style="border: 1px black solid;">Colour</th>
-         <th style="border: 1px black solid;">Noun</th>
-         <th style="border: 1px black solid;">Results</th>
-       </tr>
-      <tr>
-        <% av.each do |k,v| %>
-            <td style="border: 1px black solid;">
-              <% if v.kind_of?(String) %>
-                  <%= v %>
-              <% else %>
-                  <!-- A link to see the results would have occurred here and this part would have required a bit more planning too. Either a new view file would have been set up or the main/index.html.erb would be used instead. -->
-                  <a href="#">See Results</a>
-              <% end %>
-            </td>
-        <% end %>
-      </tr>
-    </table>
-  <% end %>
+
 
 

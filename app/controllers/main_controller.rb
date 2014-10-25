@@ -19,10 +19,11 @@ class MainController < ApplicationController
     @hash = html["items"][0..4]
     time = Time.now.getutc.to_s
     # Ruby has a method called benchmark to record response time but i can not work out how to use it properly by myself at this stage.
+  
 
-    @past_search_results = []
+    @past_search_results = [{id: 0, time: "", colour: "example", noun: "example", input: "Click link for results"}]
     # The unshift method was used here as a possible alternative to the Ruby sort or sort_by method.
-    @past_search_results.unshift({time: time, colour: colour, noun: rword, input: @hash})
+    @past_search_results.unshift({id: @past_search_results.last[:id]+1, time: time, colour: colour, noun: rword, input: @hash})
   end
 
   def past
