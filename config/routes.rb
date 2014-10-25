@@ -3,10 +3,6 @@ ImageSearch2::Application.routes.draw do
 
   post '/results' => "main#results"
 
-  # get '/results' => "main#results"
-
-  get '/past' => "main#past"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
