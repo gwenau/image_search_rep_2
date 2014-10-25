@@ -1,7 +1,9 @@
 ImageSearch2::Application.routes.draw do
   root :to => 'main#index'
 
-  get '/results' => "main#results"
+  post '/results' => "main#results"
+
+  # get '/results' => "main#results"
 
   get '/past' => "main#past"
 
